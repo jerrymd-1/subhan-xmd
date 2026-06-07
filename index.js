@@ -73,8 +73,8 @@ if (!fs.existsSync(CREDS)) {
   }
   
   let session = config.SESSION_ID.trim();
-  if (!session.includes("SUBHAN-MD~")) {
-    console.log("❌ Invalid SUBHAN-MD session format");
+  if (!session.includes("KIRA-MD~")) {
+    console.log("❌ Invalid KIRA-MD session format");
     process.exit(1);
   }
   
@@ -83,7 +83,7 @@ if (!fs.existsSync(CREDS)) {
   
   fs.mkdirSync(AUTH_DIR, { recursive: true });
   fs.writeFileSync(CREDS, decoded, { encoding: 'utf8' });
-  console.log("♻️ SUBHAN-MD session restored successfully");
+  console.log("♻️ KIRA-MD session restored successfully");
 }
 
 // Load group settings from file if exists
